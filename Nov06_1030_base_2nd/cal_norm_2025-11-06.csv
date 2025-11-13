@@ -1,0 +1,25 @@
+﻿participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.q_calc_MPCR,player.q_calc_payoff,player.q_calc_payoff2,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,88gufc8l,SUB01,0,130,130,q,final,2025-11-06 01:31:28.212864,1,,,2467.0,1,,0.0,0.6,18.2,17.0,1,1,8yy2qkta,,,,,0
+2,jbm8h5vu,SUB02,0,130,130,q,final,2025-11-06 01:31:28.240161,1,,,1540.0,2,,0.0,0.6,18.2,17.0,1,1,8yy2qkta,,,,,0
+3,ty08ylcn,SUB03,0,130,130,q,final,2025-11-06 01:31:28.345249,1,,,1534.0,3,,0.0,0.6,18.2,17.0,1,1,8yy2qkta,,,,,0
+4,rduddbrf,SUB04,0,130,130,q,final,2025-11-06 01:31:28.447463,1,,,1480.0,1,,0.0,0.6,18.2,17.0,2,1,8yy2qkta,,,,,0
+5,ujhg4w5p,SUB05,0,130,130,q,final,2025-11-06 01:31:28.622685,1,,,1360.0,2,,0.0,0.6,18.2,17.0,2,1,8yy2qkta,,,,,0
+6,s0nvo3n4,SUB06,0,130,130,q,final,2025-11-06 01:31:28.834126,1,,,1820.0,3,,0.0,0.6,18.2,17.0,2,1,8yy2qkta,,,,,0
+7,m9gazhzn,SUB07,0,130,130,q,final,2025-11-06 01:31:28.910035,1,,,2187.0,1,,0.0,0.6,18.2,17.0,3,1,8yy2qkta,,,,,0
+8,v73s3o41,SUB08,0,130,130,q,final,2025-11-06 01:31:28.944550,1,,,1980.0,2,,0.0,0.6,18.2,17.0,3,1,8yy2qkta,,,,,0
+9,kmw1w1uf,SUB10,0,130,130,q,final,2025-11-06 01:31:29.075555,1,,,1660.0,3,,0.0,0.6,18.2,17.0,3,1,8yy2qkta,,,,,0
+10,7h6bzfks,SUB09,0,130,130,q,final,2025-11-06 01:31:29.203249,1,,,2260.0,1,,0.0,0.6,18.2,17.0,4,1,8yy2qkta,,,,,0
+11,z1uo1zbt,SUB13,0,130,130,q,final,2025-11-06 01:31:29.475360,1,,,2827.0,2,,0.0,0.6,18.2,17.0,4,1,8yy2qkta,,,,,0
+12,wg1nqswx,SUB11,0,130,130,q,final,2025-11-06 01:31:29.547112,1,,,1160.0,3,,0.0,0.6,18.2,17.0,4,1,8yy2qkta,,,,,0
+13,eepb6w7q,SUB12,0,130,130,q,final,2025-11-06 01:31:29.556896,1,,,1420.0,1,,0.0,0.6,18.2,17.0,5,1,8yy2qkta,,,,,0
+14,0bauq57s,SUB14,0,130,130,q,final,2025-11-06 01:31:29.574062,1,,,2840.0,2,,0.0,0.6,18.2,17.0,5,1,8yy2qkta,,,,,0
+15,ornxmczo,SUB15,0,130,130,q,final,2025-11-06 01:31:29.853907,1,,,2060.0,3,,0.0,0.6,18.2,17.0,5,1,8yy2qkta,,,,,0
+16,379licab,SUB18,0,130,130,q,final,2025-11-06 01:31:30.139676,1,,,2400.0,1,,0.0,0.6,18.2,17.0,6,1,8yy2qkta,,,,,0
+17,rwc1c3rg,SUB19,0,130,130,q,final,2025-11-06 01:31:30.206056,1,,,2867.0,2,,0.0,0.6,18.2,17.0,6,1,8yy2qkta,,,,,0
+18,ncdnrrmm,SUB17,0,130,130,q,final,2025-11-06 01:31:30.406648,1,,,1560.0,3,,0.0,0.6,18.2,17.0,6,1,8yy2qkta,,,,,0
+19,lf91ato0,SUB21,0,130,130,q,final,2025-11-06 01:31:30.494635,1,,,1720.0,1,,0.0,0.6,18.2,17.0,7,1,8yy2qkta,,,,,0
+20,swui1l6y,SUB20,0,130,130,q,final,2025-11-06 01:31:30.511201,1,,,1640.0,2,,0.0,0.6,18.2,17.0,7,1,8yy2qkta,,,,,0
+21,msyjc2fc,SUB24,0,130,130,q,final,2025-11-06 01:31:30.525365,1,,,2627.0,3,,0.0,0.6,18.2,17.0,7,1,8yy2qkta,,,,,0
+22,76jexyoe,SUB22,0,130,130,q,final,2025-11-06 01:31:30.637905,1,,,960.0,1,,0.0,0.6,18.2,17.0,8,1,8yy2qkta,,,,,0
+23,cfv0a3xx,SUB23,0,130,130,q,final,2025-11-06 01:31:30.697856,1,,,2187.0,2,,0.0,0.6,18.2,17.0,8,1,8yy2qkta,,,,,0
+24,aksu5ilz,SUB16,0,130,130,q,final,2025-11-06 01:31:31.918566,1,,,1200.0,3,,0.0,0.6,18.2,17.0,8,1,8yy2qkta,,,,,0

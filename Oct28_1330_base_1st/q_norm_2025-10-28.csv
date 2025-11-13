@@ -1,0 +1,25 @@
+﻿participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.q_group_size,player.q_group_formation,player.q_initial_endowment,player.q_result_info,player.q_rate_of_return,player.q_payment_method,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,pqlytvkt,SUB08,0,130,130,q,final,2025-10-28 04:37:13.194279,1,,,1460.0,1,,0.0,3,1,10,1,0.6,4,1,1,7wa28fol,,,,,0
+2,8o7i41ct,SUB03,0,130,130,q,final,2025-10-28 04:37:13.237567,1,,,1720.0,2,,0.0,3,1,10,1,0.6,4,1,1,7wa28fol,,,,,0
+3,1vjsju3l,SUB05,0,130,130,q,final,2025-10-28 04:37:13.261018,1,,,1620.0,3,,0.0,3,1,10,1,0.6,4,1,1,7wa28fol,,,,,0
+4,nq9qw4h0,SUB01,0,130,130,q,final,2025-10-28 04:37:13.288174,1,,,1720.0,1,,0.0,3,1,10,1,0.6,4,2,1,7wa28fol,,,,,0
+5,d7l71r4q,SUB09,0,130,130,q,final,2025-10-28 04:37:13.311848,1,,,1800.0,2,,0.0,3,1,10,1,0.6,4,2,1,7wa28fol,,,,,0
+6,gqj5hla1,SUB02,0,130,130,q,final,2025-10-28 04:37:13.338685,1,,,1780.0,3,,0.0,3,1,10,1,0.6,4,2,1,7wa28fol,,,,,0
+7,pe2umqts,SUB12,0,130,130,q,final,2025-10-28 04:37:13.365542,1,,,2160.0,1,,0.0,3,1,10,1,0.6,4,3,1,7wa28fol,,,,,0
+8,98qlmu89,SUB04,0,130,130,q,final,2025-10-28 04:37:13.392116,1,,,2320.0,2,,0.0,3,1,10,1,0.6,4,3,1,7wa28fol,,,,,0
+9,j6yqxxoi,SUB15,0,130,130,q,final,2025-10-28 04:37:13.415741,1,,,2487.0,3,,0.0,3,1,10,1,0.6,4,3,1,7wa28fol,,,,,0
+10,bvednbk1,SUB17,0,130,130,q,final,2025-10-28 04:37:13.442131,1,,,800.0,1,,0.0,3,1,10,1,0.6,4,4,1,7wa28fol,,,,,0
+11,6hwgynvg,SUB19,0,130,130,q,final,2025-10-28 04:37:13.470432,1,,,1460.0,2,,0.0,3,1,10,1,0.6,4,4,1,7wa28fol,,,,,0
+12,at29pg4l,SUB16,0,130,130,q,final,2025-10-28 04:37:13.496932,1,,,1480.0,3,,0.0,3,1,10,1,0.6,4,4,1,7wa28fol,,,,,0
+13,810fbjw6,SUB22,0,130,130,q,final,2025-10-28 04:37:13.525007,1,,,2000.0,1,,0.0,3,1,10,1,0.6,4,5,1,7wa28fol,,,,,0
+14,8yzby83o,SUB20,0,130,130,q,final,2025-10-28 04:37:13.551884,1,,,2620.0,2,,0.0,3,1,10,1,0.6,4,5,1,7wa28fol,,,,,0
+15,vuiqa7x4,SUB23,0,130,130,q,final,2025-10-28 04:37:13.579949,1,,,1460.0,3,,0.0,3,1,10,1,0.6,4,5,1,7wa28fol,,,,,0
+16,m3zfocuy,SUB13,0,130,130,q,final,2025-10-28 04:37:13.606711,1,,,2040.0,1,,0.0,3,1,10,1,0.6,4,6,1,7wa28fol,,,,,0
+17,4cmmq666,SUB07,0,130,130,q,final,2025-10-28 04:37:13.631939,1,,,2267.0,2,,0.0,3,1,10,1,0.6,4,6,1,7wa28fol,,,,,0
+18,ozghf93m,SUB06,0,130,130,q,final,2025-10-28 04:37:13.661130,1,,,980.0,3,,0.0,3,1,10,1,0.6,4,6,1,7wa28fol,,,,,0
+19,37sjrgfh,SUB24,0,130,130,q,final,2025-10-28 04:37:13.690041,1,,,1880.0,1,,0.0,3,1,10,1,0.6,4,7,1,7wa28fol,,,,,0
+20,2f692ugv,SUB21,0,130,130,q,final,2025-10-28 04:37:13.717911,1,,,2520.0,2,,0.0,3,1,10,1,0.6,4,7,1,7wa28fol,,,,,0
+21,9g4xodmv,SUB10,0,130,130,q,final,2025-10-28 04:37:13.745849,1,,,1280.0,3,,0.0,3,1,10,1,0.6,4,7,1,7wa28fol,,,,,0
+22,m9yslktc,SUB14,0,130,130,q,final,2025-10-28 04:37:13.772840,1,,,2520.0,1,,0.0,3,1,10,1,0.6,4,8,1,7wa28fol,,,,,0
+23,bnmnbdwn,SUB11,0,130,130,q,final,2025-10-28 04:37:13.800389,1,,,2627.0,2,,0.0,3,1,10,1,0.6,4,8,1,7wa28fol,,,,,0
+24,mawud0wr,SUB18,0,130,130,q,final,2025-10-28 04:37:13.826536,1,,,1760.0,3,,0.0,3,1,10,1,0.6,4,8,1,7wa28fol,,,,,0

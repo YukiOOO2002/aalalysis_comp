@@ -1,0 +1,25 @@
+﻿participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.q_group_size,player.q_group_formation,player.q_initial_endowment,player.q_mpcr_decision,player.q_result_info,player.q_payment_method,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,54yubnho,SUB01,0,139,139,q,final,2025-10-29 01:33:10.676945,1,,,2267.0,1,,0.0,3,1,10,2,1,4,1,1,y2l70usy,,,,,0
+2,dwfj1r4y,SUB02,0,139,139,q,final,2025-10-29 01:33:10.789972,1,,,1720.0,2,,0.0,3,1,10,2,1,4,1,1,y2l70usy,,,,,0
+3,ksw9l7t6,SUB03,0,139,139,q,final,2025-10-29 01:33:10.893741,1,,,1818.0,3,,0.0,3,1,10,2,1,4,1,1,y2l70usy,,,,,0
+4,hxfeqtzc,SUB05,0,139,139,q,final,2025-10-29 01:33:11.227312,1,,,2040.0,1,,0.0,3,1,10,2,1,4,2,1,y2l70usy,,,,,0
+5,x8kr76e4,SUB06,0,139,139,q,final,2025-10-29 01:33:11.275777,1,,,1453.0,2,,0.0,3,1,10,2,1,4,2,1,y2l70usy,,,,,0
+6,6iqfv6g8,SUB04,0,139,139,q,final,2025-10-29 01:33:11.342775,1,,,2040.0,3,,0.0,3,1,10,2,1,4,2,1,y2l70usy,,,,,0
+7,rbm9ueqm,SUB08,0,139,139,q,final,2025-10-29 01:33:11.444223,1,,,1453.0,1,,0.0,3,1,10,2,1,4,3,1,y2l70usy,,,,,0
+8,vnfp85cs,SUB07,0,139,139,q,final,2025-10-29 01:33:11.455260,1,,,2535.0,2,,0.0,3,1,10,2,1,4,3,1,y2l70usy,,,,,0
+9,p36hszja,SUB09,0,139,139,q,final,2025-10-29 01:33:11.741222,1,,,1980.0,3,,0.0,3,1,10,2,1,4,3,1,y2l70usy,,,,,0
+10,280zk9wg,SUB13,0,139,139,q,final,2025-10-29 01:33:12.146004,1,,,2075.0,1,,0.0,3,1,10,2,1,4,4,1,y2l70usy,,,,,0
+11,vdihyf5m,SUB11,0,139,139,q,final,2025-10-29 01:33:12.187352,1,,,2267.0,2,,0.0,3,1,10,2,1,4,4,1,y2l70usy,,,,,0
+12,1wag9qb2,SUB10,0,139,139,q,final,2025-10-29 01:33:12.360903,1,,,1725.0,3,,0.0,3,1,10,2,1,4,4,1,y2l70usy,,,,,0
+13,8q949lfb,SUB14,0,139,139,q,final,2025-10-29 01:33:12.283568,1,,,2377.0,1,,0.0,3,1,10,2,1,4,5,1,y2l70usy,,,,,0
+14,owsrn4kr,SUB15,0,139,139,q,final,2025-10-29 01:33:12.526623,1,,,1253.0,2,,0.0,3,1,10,2,1,4,5,1,y2l70usy,,,,,0
+15,nzu47115,SUB12,0,139,139,q,final,2025-10-29 01:33:12.712214,1,,,2092.0,3,,0.0,3,1,10,2,1,4,5,1,y2l70usy,,,,,0
+16,nhgguk36,SUB18,0,139,139,q,final,2025-10-29 01:33:12.973739,1,,,1725.0,1,,0.0,3,1,10,2,1,4,6,1,y2l70usy,,,,,0
+17,lxwf03p4,SUB17,0,139,139,q,final,2025-10-29 01:33:13.032739,1,,,2887.0,2,,0.0,3,1,10,2,1,4,6,1,y2l70usy,,,,,0
+18,lbp0s248,SUB16,0,139,139,q,final,2025-10-29 01:33:13.074553,1,,,1890.0,3,,0.0,3,1,10,2,1,4,6,1,y2l70usy,,,,,0
+19,amq61fdl,SUB20,0,139,139,q,final,2025-10-29 01:33:13.459330,1,,,2267.0,1,,0.0,3,1,10,2,1,4,7,1,y2l70usy,,,,,0
+20,2yj6jmny,SUB21,0,139,139,q,final,2025-10-29 01:33:13.522332,1,,,2100.0,2,,0.0,3,1,10,2,1,4,7,1,y2l70usy,,,,,0
+21,ztrok7l0,SUB22,0,139,139,q,final,2025-10-29 01:33:13.923214,1,,,1453.0,3,,0.0,3,1,10,2,1,4,7,1,y2l70usy,,,,,0
+22,qv0fhzvw,SUB19,0,139,139,q,final,2025-10-29 01:33:14.058388,1,,,1940.0,1,,0.0,3,1,10,2,1,4,8,1,y2l70usy,,,,,0
+23,54c32q93,SUB23,0,139,139,q,final,2025-10-29 01:33:14.102899,1,,,1250.0,2,,0.0,3,1,10,2,1,4,8,1,y2l70usy,,,,,0
+24,5v1tvuhs,SUB24,0,139,139,q,final,2025-10-29 01:33:14.818439,1,,,1865.0,3,,0.0,3,1,10,2,1,4,8,1,y2l70usy,,,,,0

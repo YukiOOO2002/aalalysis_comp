@@ -123,6 +123,9 @@ print(head(df2 %>% select(group_type, Base, `015`, `03`, `045`, `participant.lab
 # 処理対象となる round n_max_c_and_p の列名をリスト化
 max_c_and_p_cols <- paste0("round ", 1:num_rounds, "_max_c_and_p")
 
+# group_type の望ましい順序を定義
+desired_order <- c("base", "015", "03", "045") # 修正箇所: 順序を明示的に指定
+
 # df2をロング形式に変換し、グループごとに集計
 df_summary <- df2 %>%
   select(group_type, all_of(max_c_and_p_cols)) %>%
@@ -132,6 +135,8 @@ df_summary <- df2 %>%
     values_to = "flag_value"
   ) %>%
   mutate(
+    # ✨ 修正箇所: group_type を factor に変換し、順序を指定する
+    group_type = factor(group_type, levels = desired_order),
     round = as.numeric(str_extract(round_col, "\\d+")), 
     .before = round_col
   ) %>%
@@ -145,14 +150,16 @@ df_summary <- df2 %>%
 
 # --- 新しいデータフレームの確認 ---
 cat("\n--- ラウンド別、群別の平均値（新しいデータフレーム）---\n")
+# factor化により望ましい順序で表示されることを確認
 print(df_summary)
 
 # 折れ線グラフを作成
 plot_max_c_and_p_by_round <- df_summary %>%
-  filter(group_type %in% c("base", "015", "03", "045")) %>%
+  # factor化したので filter は levels の順序に影響しないが、念のため残す
+  filter(group_type %in% c("base", "015", "03", "045")) %>% 
   ggplot(aes(x = round, y = average_max_c_and_p, color = group_type, group = group_type)) +
   geom_line(linewidth = 1) + 
-  geom_point(size = 2) +      
+  geom_point(size = 2) + 
   labs(
     title = "ラウンドを通じた最大貢献度＆最大ペイオフ獲得率の推移 (4群比較)",
     x = "ラウンド",

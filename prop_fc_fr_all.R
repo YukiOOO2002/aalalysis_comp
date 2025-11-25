@@ -103,7 +103,7 @@ for (dset in datasets) {
     ) +
     scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1)) + 
     scale_x_continuous(breaks = 1:10) + 
-    theme_minimal() + 
+    theme_gray() + 
     theme(plot.title = element_text(hjust = 0.5))
   
   # ★★★ 修正箇所 ★★★

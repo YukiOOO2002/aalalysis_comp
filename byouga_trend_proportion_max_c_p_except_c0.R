@@ -6,13 +6,10 @@ library(tidyr)
 library(stringr)
 library(ggplot2)
 
-# -----------------------------------------------------------
-# ステップ 1: 初期設定とデータ読み込み、前処理
-# -----------------------------------------------------------
-# rm(list = ls()) # 実行環境によってはこの行はコメントアウトを推奨します
-# setwd("C:/Users/FMV/OneDrive - OUMail (Osaka University)/デスクトップ") # 実行環境に合わせて変更してください
+rm(list = ls()) 
+setwd("C:/Users/FMV/OneDrive - OUMail (Osaka University)/デスクトップ") 
 
-path <- "015/data/merge_final.csv" # ファイルパスを適切に設定してください
+path <- "015/data/merge_final.csv"
 # readr::read_csv を使用してデータを読み込む
 df <- read_csv(path, show_col_types = FALSE)
 
@@ -73,9 +70,6 @@ for (i in 1:num_rounds) {
   df2 <- calculate_max_flags(df2, i)
 }
 
-# -----------------------------------------------------------
-# ステップ 2: 結合フラグ (max_c_and_p) の作成
-# -----------------------------------------------------------
 for (i in 1:num_rounds) {
   col_contribute <- paste0("round ", i, "_max_contribute")
   col_payoff <- paste0("round ", i, "_max_payoff")
@@ -91,11 +85,6 @@ for (i in 1:num_rounds) {
       )
     )
 }
-
-
-# -----------------------------------------------------------
-# ステップ 3: 集計と新しいデータフレーム (df_summary) の作成
-# -----------------------------------------------------------
 
 # 処理対象となる round n_max_c_and_p の列名をリスト化
 max_c_and_p_cols <- paste0("round ", 1:num_rounds, "_max_c_and_p")
@@ -137,10 +126,6 @@ cat("\n--- ラウンド別、群別の平均値（新しいデータフレーム
 print(df_summary)
 
 
-# -----------------------------------------------------------
-# ステップ 4: 折れ線グラフの作成と表示
-# -----------------------------------------------------------
-
 # 折れ線グラフを作成
 plot_max_c_and_p_by_round <- df_summary %>%
   # グラフ化対象の4群にデータをフィルタリング
@@ -155,9 +140,9 @@ plot_max_c_and_p_by_round <- df_summary %>%
     y = "proportion",
     color = "treatment"
   ) +
-  scale_x_continuous(breaks = 1:num_rounds) + # 横軸を1から10までの整数のみにする
-  scale_y_continuous(limits = c(0, NA)) + # y軸は0から開始
-  theme_minimal(base_family = "sans") + # シンプルなテーマとフォント
+  scale_x_continuous(breaks = 1:num_rounds) + 
+  scale_y_continuous(limits = c(0, NA)) + 
+  theme_gray() + 
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold"),
     legend.position = "bottom"

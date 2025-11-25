@@ -4,6 +4,7 @@ library(readr)
 library(dplyr)
 library(stringr)
 
+
 #データ読み込み（メイン＋質問コントロール＋）
 setwd("C:/Users/FMV/OneDrive - OUMail (Osaka University)/デスクトップ")
 

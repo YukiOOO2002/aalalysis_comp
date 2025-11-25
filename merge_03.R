@@ -24,7 +24,7 @@ df_2nd <- df_2nd %>%
   mutate(
     label_num_char = str_extract(participant.label, "\\d+"),
     new_num = as.numeric(label_num_char) + 24,
-    new_label = paste0("sub", str_pad(new_num, width = 2, pad = "0")),
+    new_label = paste0("SUB", str_pad(new_num, width = 2, pad = "0")),
     participant.label = new_label
   ) %>%
   
@@ -43,7 +43,7 @@ df_q2 <- df_q2 %>%
   mutate(
     label_num_char = str_extract(participant.label, "\\d+"),
     new_num = as.numeric(label_num_char) + 24,
-    new_label = paste0("sub", str_pad(new_num, width = 2, pad = "0")),
+    new_label = paste0("SUB", str_pad(new_num, width = 2, pad = "0")),
     participant.label = new_label
   ) %>%
   
@@ -116,7 +116,7 @@ df_wide <- df_combined2 %>%
 df_wide2 <- df_wide %>% 
   left_join(
     df_b3 %>% 
-      select(participant.label,alpha_med, beta_med),
+      select(participant.label,alpha_med,alpha_positive, beta_med, beta_positive),
     by = "participant.label"
   ) %>% 
   left_join(
@@ -124,7 +124,6 @@ df_wide2 <- df_wide %>%
       select(participant.label,player.gender, player.age,player.affiliation),
     by = "participant.label"
   ) 
-
 
 write.csv(
   df_wide2, 

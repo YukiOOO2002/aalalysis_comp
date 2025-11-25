@@ -7,7 +7,7 @@ library(stringr)
 library(ggplot2)
 
 # -----------------------------------------------------------
-# ステップ 1: 初期設定とデータ読み込み、前処理（再掲）
+# ステップ 1: 初期設定とデータ読み込み、前処理
 # -----------------------------------------------------------
 # rm(list = ls()) # 実行環境によってはこの行はコメントアウトを推奨します
 # setwd("C:/Users/FMV/OneDrive - OUMail (Osaka University)/デスクトップ") # 実行環境に合わせて変更してください
@@ -23,7 +23,7 @@ df <- df %>%
 
 num_rounds <- 10
 
-# calculate_max_flags 関数（修正版を再定義）
+# calculate_max_flags 関数（貢献度が最大かつ0でないことを条件に追加）
 calculate_max_flags <- function(data, round_num) {
   r_contribute <- paste0("round ", round_num, "_contribute")
   r_payoff <- paste0("round ", round_num, "_payoff")
@@ -37,7 +37,7 @@ calculate_max_flags <- function(data, round_num) {
     mutate(
       max_contribute_group = max(.data[[r_contribute]], na.rm = TRUE),
       
-      # contributeの最大値と比較し、さらに「contributeが0でない」ことを条件に追加
+      # 修正されたロジック: contributeの最大値かつ0でないことを条件に追加
       !!new_col_contribute := ifelse(
         .data[[r_contribute]] == max_contribute_group & .data[[r_contribute]] != 0,
         1,
@@ -63,7 +63,7 @@ for (i in 1:num_rounds) {
   df2 <- calculate_max_flags(df2, i)
 }
 
-# max_c_and_p列の作成
+# max_c_and_p列の作成 (最大貢献度フラグと最大ペイオフフラグの両方が1の場合に1)
 for (i in 1:num_rounds) {
   col_contribute <- paste0("round ", i, "_max_contribute")
   col_payoff <- paste0("round ", i, "_max_payoff")
@@ -80,25 +80,17 @@ for (i in 1:num_rounds) {
 }
 
 # -----------------------------------------------------------
-# ステップ 3: グループフラグ列の作成関数と適用 (修正部分)
+# ステップ 3: グループフラグ列の作成関数と適用
 # -----------------------------------------------------------
 
 #' participant.labelに基づいてバイナリフラグ列を作成する関数
-#'
-#' @param data データフレーム
-#' @param group_names フラグ列を作成したいグループ名のベクトル (例: c("base", "015", "03", "045"))
-#' @return 新しいフラグ列が追加されたデータフレーム
 create_group_flag_columns <- function(data, group_names) {
   
   for (group in group_names) {
-    # 【修正点】: '015', '03', '045' に X プレフィックスを付けず、そのままの列名を使用
-    # Rで数字から始まる列名を扱う際はバッククォートを使用
     col_name <- ifelse(group == "base", "Base", group) 
     
-    # Rで動的な列名とバッククォートを組み合わせる
     data <- data %>%
       mutate(
-        # !!as.name(col_name) はバッククォートで囲まれた列名として解釈される
         !!as.name(col_name) := ifelse(
           group_type == group,
           1,
@@ -115,10 +107,70 @@ target_groups <- c("base", "015", "03", "045")
 df2 <- create_group_flag_columns(df2, target_groups)
 
 
+# -----------------------------------------------------------
+# ステップ 4: 集計とグラフ化 (順序の修正を適用)
+# -----------------------------------------------------------
 
+# 処理対象となる round n_max_c_and_p の列名をリスト化
+max_c_and_p_cols <- paste0("round ", 1:num_rounds, "_max_c_and_p")
+
+# group_type の望ましい順序を定義 (ggplot2の凡例順序を制御するため)
+desired_order <- c("base", "015", "03", "045") 
+
+# df2をロング形式に変換し、グループごとに集計
+df_summary <- df2 %>%
+  select(group_type, all_of(max_c_and_p_cols)) %>%
+  pivot_longer(
+    cols = all_of(max_c_and_p_cols), 
+    names_to = "round_col",
+    values_to = "flag_value"
+  ) %>%
+  mutate(
+    # ✨ 修正箇所: group_type を factor に変換し、順序を指定する
+    group_type = factor(group_type, levels = desired_order),
+    round = as.numeric(str_extract(round_col, "\\d+")), 
+    .before = round_col
+  ) %>%
+  group_by(group_type, round) %>%
+  summarise(
+    total_flag_sum = sum(flag_value, na.rm = TRUE),
+    average_max_c_and_p_48 = total_flag_sum / 48, # 48はグループごとの人数と仮定
+    .groups = 'drop'
+  ) %>%
+  select(group_type, round, average_max_c_and_p = average_max_c_and_p_48)
+
+# --- 新しいデータフレームの確認 ---
+cat("\n--- ラウンド別、群別の平均値（順序固定済み）---\n")
+print(df_summary)
+
+# 折れ線グラフを作成
+plot_max_c_and_p_by_round <- df_summary %>%
+  ggplot(aes(x = round, y = average_max_c_and_p, color = group_type, group = group_type)) +
+  geom_line(linewidth = 1) + 
+  geom_point(size = 2) + 
+  labs(
+    title = "ラウンドを通じた最大貢献度＆最大ペイオフ獲得率の推移 (4群比較)",
+    x = "ラウンド",
+    y = "平均最大獲得フラグ（/48）",
+    color = "群の種類"
+  ) +
+  # 凡例の順序を factor の levels に従わせる
+  scale_color_discrete(breaks = desired_order) + 
+  scale_x_continuous(breaks = 1:num_rounds) + 
+  scale_y_continuous(limits = c(0, NA)) + 
+  theme_minimal(base_family = "sans") + 
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "bottom"
+  )
+
+# グラフを表示
+print(plot_max_c_and_p_by_round)
+
+# CSVファイルの書き出し (新しいファイル名で保存)
 write.csv(
   df2, 
   file = "015/data/merge_final_dummy_c0.csv",
-  row.names = FALSE,   
-  quote = FALSE       
+  row.names = FALSE,  
+  quote = FALSE      
 )
